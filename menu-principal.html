@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra y vende coches</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="menu-principal.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Bienvenido</h1>
+    </header>
+
+    <div class="container">
+        <header class="header">
+            ¿En qué estas interesado? 
+        </header>
+
+
+        <main class="content">
+            <article class="article" onclick="vender()">
+                <h1>Vende tu coche aquí</h1>
+                <p>Entre aquí y podras publicar en la web un anuncio del vehículo que quiera vender</p>
+            </article>
+        </main>
+        
+
+        <aside class="sidebar" onclick="verOtrosAnuncios()">
+            <img src="coches.jpg" alt="" class="imagen">
+            <h4 id="texto">Compra coches seminuevos aquí</h4>
+        </aside>
+
+
+        <div class="contenedor-abajo" onclick="verMisAnuncios()">
+            Tus anuncios
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function vender() {
+            window.location = "vender.html";
+        }
+
+        function verMisAnuncios() {
+            window.location = "mis-anuncios.html";
+        }
+
+        function verOtrosAnuncios() {
+            window.location = "cochesSeminuevos.html";
+
+        }
+
+
+
+    </script>
+
+    
+
+
+</body>
+</html>

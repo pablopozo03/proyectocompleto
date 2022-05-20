@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Acceso de usuario</title>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="LOGIN.css">
+</head>
+<body>
+
+    <div class="caja">
+        <img src="imagenes/usuario-imagen.png" class="avatar" alt="Avatar Image">
+        <h1>Inicia sesión aquí</h1>
+            <!--Usuario-->
+            <label for="nombreUsuario">Usuario</label>
+            <input type="text" placeholder="Introduce tu usuario" id="usuario">
+            <!--Contraseña-->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" placeholder="Introduce contraseña" id="contrasenia">
+            <!--Boton-->
+            <input type="submit" value="Iniciar sesión" onclick="Login()">
+
+            <input type="submit" value="Crear un usuario" onclick="crearUsuario()">
+    </div>
+
+
+
+    <script>
+        function Login(){
+            const dataForSelect = {
+                operation: "select",
+                table: "usuarios"
+            };
+
+            const idImplementacion = "AKfycbzem_JauGAaLleTB--U__KMVVebSNhzLi_F94KbKwlIf3A9wI9jSg1RHpRqz8Et5FVX";
+
+            GoogleSheetDataBaseOperation(
+                idImplementacion,
+                dataForSelect,
+                LoginTerminado
+            );
+        }
+
+        function LoginTerminado(response) {
+
+            let usuarioSeleccionado = false;
+
+            for (let i = 0; i < response.values.length; i++) {
+                let password = document.getElementById("contrasenia").value;
+                let user = document.getElementById("usuario").value;
+
+                if (response.values[i].usuario == user && response.values[i].contrasenia == password) {
+                    console.log("Usuario correcto. !Bienvenido!");
+                    usuarioSeleccionado = true;
+                    window.location = "menu-principal.html";
+                }
+            }
+
+            if (usuarioSeleccionado == false) {
+                alert ("Usuario o contraseña invalida, por favor intentelo de nuevo");
+            }
+        }
+    </script>
+
+    <script>
+        function crearUsuario() {
+            window.location = "crearUsuario.html";
+        }
+    </script>
+
+
+
+
+</body>
+</html>
+

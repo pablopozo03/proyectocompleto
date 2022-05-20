@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elimina un anuncio</title>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="borrarAnuncio.css">
+
+</head>
+<body>
+
+    <h1>Eliminar anuncio</h1>
+
+    <div class="contenedor">
+        <table>
+            <tr>
+                <td><label for="key">Numero de anuncio</label></td>
+                <td><input type="text" id="key" value=""></td>
+            </tr>
+        </table>
+
+        <div class="boton"><button onclick="deleteAnuncio()">Borrar</button></div>
+    </div>
+
+
+    
+    <h2>Información del resultado</h2>
+
+    <div class="contenedor2">
+        <p>¿Ha ocurrido algún error?: <span id="error"></span></p>
+        <p>Mensaje: <span id="message"></span></p>
+    </div>
+
+   
+    <script src="borrarAnuncio.js"></script>
+</body>
+</html>

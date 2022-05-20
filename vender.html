@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publica tu anuncio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="vender.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-image">
+            <img src="imagenes/undraw_vehicle_sale_a645.svg">
+        </div>
+
+        <div  class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                         <h1>¿Qué vehículo quieres vender?</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="id">● ID: </label>
+                        <input type="text" id="id" placeholder="Introduce ID">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="marca">● Marca del vehículo: </label>
+                        <input type="text" id="marca" placeholder="Selecciona marca">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="modelo">● Modelo del vehículo: </label>
+                        <input type="text" id="modelo" placeholder="Selecciona modelo">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="anio">● Año de matriculación: </label>
+                        <input type="text" id="anio" placeholder="Introduce año de matriculación">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="numero">● Nº de anuncio: </label>
+                        <input type="text" id="numero" placeholder="Introduce el nº de anuncio">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="imagen">● Foto: </label>
+                        <input type="file" id="imagen">
+                    </div>
+
+                </div>
+
+                <div class="continue-button">
+                    <button  onclick="insertarAnuncio()" id="insertar">Añade tu nuevo anuncio</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+   
+
+    <script src="vender.js"></script>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

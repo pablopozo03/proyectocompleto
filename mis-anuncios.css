@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    background-color: #18314F;
+}
+
+header{
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+div.anuncios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 800%;
+}
+
+div.anuncio {
+    border: solid mediumseagreen 4px;
+    background-color: #E6F9AF;
+    color: #384E77;
+    margin: 12px;
+    flex-grow: 1;
+    flex-basis: 45%;
+    padding: 3px;
+}
+
+div.anuncio:hover {
+    background-color: rgb(216, 204, 204);
+}
+
+img{
+    width: 150px;
+    padding: 10px;
+}
+
+div.resultado{
+    display: flex;
+    flex-direction: row;
+}
+
+div.columnaDerecha{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+}
+
+.tablaDelete {
+    border: solid 3px #2D82B7;
+    padding: 5px;
+    background-color: #42E2B8;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: #2A3D45;
+    padding-top: 30px;
+}
+
+form{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+

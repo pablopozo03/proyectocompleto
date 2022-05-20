@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar</title>
+    <link rel="stylesheet" href="actualizarAnuncio.css">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+</head>
+<body>
+    <h1>Actualiza tu anuncio</h1>
+
+    <div class="contenedor">
+        <table>
+            <tr>
+                <td><label for="key">Numero de anuncio</label></td>
+                <td><input type="text" id="key" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnName1">Tabla que quieres cambiar</label></td>
+                <td><input type="text" id="columnName1" value=""></td>
+                <td><label for="columnValue1">Nuevos datos</label></td>
+                <td><input type="text" id="columnValue1" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="columnName2">Tabla que quieres cambiar</label></td>
+                <td><input type="text" id="columnName2" value=""></td>
+                <td><label for="columnValue2">Nuevos datos</label></td>
+                <td><input type="text" id="columnValue2" value=""></td>
+            </tr>
+        </table>
+    
+        <div class="boton"><button onclick="update()">Insertar una fila</button></div>
+    </div>
+ 
+
+    <h1>Información del resultado</h1>
+    <div class="contenedor2">
+        <p>¿Hay error?: <span id="error"></span></p>
+        <p>Mensaje: <span id="message"></span></p>
+    </div>
+
+    <script src="actualizarAnuncio.js"></script>
+    
+</body>
+</html>
